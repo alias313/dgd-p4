@@ -18,6 +18,8 @@ begin
 		if nrst='0' then 
 			time_cnt <= 0;
 			add_cnt <= 0;
+			sync <= '0';
+			res <= x"0";
 		elsif clk'event and clk='1' then
 			if add = '1' then
 				add_cnt <= add_cnt+1;
@@ -25,9 +27,10 @@ begin
 
 			if time_cnt = 13 then 
 				res <= std_logic_vector(to_unsigned(add_cnt, res'length));
+				sync <= '1';
+				
 				time_cnt <= 1;
 				add_cnt <= 0;
-				sync <= '1';
 			else 
 				time_cnt <= time_cnt+1;
 				sync <= '0';
