@@ -1,9 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 entity t_cnt is
-	port( clk, nrst : in std_logic; ara : out std_logic );
+	port( clk, nrst : in std_logic;
+		ara : out std_logic;
+		res : out std_logic_vector(3 downto 0) );
 end t_cnt;
 
 architecture arq of t_cnt is
@@ -18,4 +21,5 @@ begin
 		end if;
 	end process;
 	ara <= '1' when time_cnt=11 else '0';
+	res <= std_logic_vector(to_unsigned(time_cnt, res'length));
 end arq;
