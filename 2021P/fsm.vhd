@@ -22,4 +22,6 @@ begin
 			end case;
 		end if;
 	end process;
+	ld <= '1' when s_fsm = s2 else '0';
+	ct <= '1' when s_fsm = s3 else '0';
 end a;
