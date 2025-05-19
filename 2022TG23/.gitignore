@@ -1,0 +1,17 @@
+undo_redo.txt
+*.bak
+
+*.done
+/db
+/incremental_db
+
+*.rpt
+*.summary
+*.qmsg
+
+*.qws
+*.pof
+*.sof
+*.lpc.html
+*.lpc.txt
+*.lpc.rdb
