@@ -260,7 +260,7 @@ GND*                         : B8        :        :                   :         
 GND*                         : B9        :        :                   :         : 3         :                
 GND*                         : B10       :        :                   :         : 3         :                
 GND*                         : B11       :        :                   :         : 3         :                
-clk                          : B12       : input  : 3.3-V LVTTL       :         : 3         : N              
+ct                           : B12       : output : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : B13       :        :                   :         : 4         :                
 GND*                         : B14       :        :                   :         : 4         :                
 GND*                         : B15       :        :                   :         : 4         :                
@@ -286,7 +286,7 @@ GND*                         : C8        :        :                   :         
 GND*                         : C9        :        :                   :         : 3         :                
 GND*                         : C10       :        :                   :         : 3         :                
 GND*                         : C11       :        :                   :         : 3         :                
-GND*                         : C12       :        :                   :         : 3         :                
+ld                           : C12       : output : 3.3-V LVTTL       :         : 3         : N              
 s                            : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : C14       : gnd    :                   :         :           :                
 GND*                         : C15       :        :                   :         : 4         :                
@@ -296,7 +296,7 @@ GND                          : C18       : gnd    :                   :         
 GND*                         : C19       :        :                   :         : 4         :                
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
 GND*                         : C21       :        :                   :         : 4         :                
-ct                           : C22       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : C22       :        :                   :         : 4         :                
 GND*                         : C23       :        :                   :         : 4         :                
 GND*                         : C24       :        :                   :         : 5         :                
 GND*                         : C25       :        :                   :         : 5         :                
@@ -309,7 +309,7 @@ GND*                         : D5        :        :                   :         
 GND*                         : D6        :        :                   :         : 3         :                
 GND*                         : D7        :        :                   :         : 3         :                
 GND*                         : D8        :        :                   :         : 3         :                
-ld                           : D9        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : D9        :        :                   :         : 3         :                
 GND*                         : D10       :        :                   :         : 3         :                
 GND*                         : D11       :        :                   :         : 3         :                
 GND*                         : D12       :        :                   :         : 3         :                
@@ -399,7 +399,7 @@ GND*                         : G17       :        :                   :         
 GND*                         : G18       :        :                   :         : 4         :                
 VCCA_PLL2                    : G19       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : G20       : gnd    :                   :         :           :                
-rst                          : G21       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : G21       :        :                   :         : 5         :                
 GND*                         : G22       :        :                   :         : 5         :                
 GND*                         : G23       :        :                   :         : 5         :                
 GND*                         : G24       :        :                   :         : 5         :                
@@ -561,8 +561,8 @@ GND*                         : N23       :        :                   :         
 GND*                         : N24       :        :                   :         : 5         :                
 GND+                         : N25       :        :                   :         : 5         :                
 GND+                         : N26       :        :                   :         : 5         :                
-GND+                         : P1        :        :                   :         : 1         :                
-GND+                         : P2        :        :                   :         : 1         :                
+rst                          : P1        : input  : 3.3-V LVTTL       :         : 1         : N              
+clk                          : P2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : P3        :        :                   :         : 1         :                
 GND*                         : P4        :        :                   :         : 1         :                
 VCCIO1                       : P5        : power  :                   : 3.3V    : 1         :                
