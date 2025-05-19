@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY regdesp6
+set_global_assignment -name TOP_LEVEL_ENTITY fsm_desp6
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:15:40  MAY 19, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -48,10 +48,12 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name VHDL_FILE regdesp6.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE regdesp6.vwf
+set_global_assignment -name VHDL_FILE fsm_desp6.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name VECTOR_WAVEFORM_FILE regdesp6.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE regdesp6.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE fsm_desp6.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE fsm_desp6.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
