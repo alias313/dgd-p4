@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-use ieee.numeric_std.all;
 
 entity t_cnt is
 	port( clk, nrst : in std_logic;
@@ -20,6 +19,9 @@ begin
 			end if;
 		end if;
 	end process;
-	ara <= '1' when time_cnt=11 else '0';
-	res <= std_logic_vector(to_unsigned(time_cnt, res'length));
+	ara <= '1' when time_cnt = 11 else '0';
+	res(0) <= '1' when (time_cnt mod 2) = 1 else '0';
+	res(1) <= '1' when ((time_cnt/2) mod 2) = 1 else '0';
+	res(2) <= '1' when ((time_cnt/4) mod 2) = 1 else '0';
+	res(3) <= '1' when ((time_cnt/8) mod 2) = 1 else '0';
 end arq;
