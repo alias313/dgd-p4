@@ -15,25 +15,29 @@ begin
 	begin
 		if rst = '1' then qq <= x"0"; tc <= '0';
 		elsif clk'event and clk = '1' then
-			if ena = '1' then
-				if up = '1' then
-					if qq = x"F" then
-						qq <= x"0";
-					else
-						if qq = x"E" then
-							tc <= '1';
-						end if;
-						qq <= qq+1;
-					end if;
+			if (ena = '1' and up = '1') then
+				if qq = x"F" then
+					qq <= x"0";
+					tc <= '0';
 				else
-					if qq = x"0" then
-						qq <= x"F";
+					if qq = x"E" then
+						tc <= '1';
 					else
-						if qq = x"1" then
-							tc <= '1';
-						end if;
-						qq <= qq-1;
+						tc <= '0';
 					end if;
+					qq <= qq+1;
+				end if;
+			elsif (ena = '1' and up = '0') then
+				if qq = x"0" then
+					qq <= x"F";
+					tc <= '0';
+				else
+					if qq = x"1" then
+						tc <= '1';
+					else
+						tc <= '0';
+					end if;
+					qq <= qq-1;
 				end if;
 			end if;
 		end if;
